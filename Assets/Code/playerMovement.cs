@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 8f;
-    public float jumpForce = 12f;
+    public float jumpForce = 18f;
     public Transform groundCheck;
     public float groundCheckDistance = 0.12f;
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
@@ -15,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 24f;
+    private float dashingPower = 12f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 0.5f;
 
@@ -53,16 +51,23 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+        if (Input.GetKeyDown(KeyCode.M) && canDash)
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            Vector2 dashDir = new Vector2(x, y);
+
+            if (dashDir == Vector2.zero)
+                dashDir = new Vector2(transform.localScale.x, 0);
+
+            StartCoroutine(Dash(dashDir));
+        }
+
         //Update animator parameters
         if (animator != null) 
         {
             animator.SetFloat("moveInput", Mathf.Abs(horizInput));
             animator.SetBool("isGrounded", isGrounded);
-        }
-
-        if (Input.GetKeyDown(KeyCode.M) && canDash)
-        {
-            StartCoroutine(Dash());
         }
     }
 
@@ -100,16 +105,17 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-    private IEnumerator Dash()
+    private IEnumerator Dash(Vector2 direction)
     {
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
-        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        rb.linearVelocity = direction.normalized * dashingPower;
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
+        rb.linearVelocity = Vector2.zero;
         rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
