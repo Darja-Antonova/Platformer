@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 8f;
-    public float jumpForce = 18f;
+    public float jumpForce = 12f;
     public Transform groundCheck;
     public float groundCheckDistance = 0.12f;
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 12f;
+    private float dashingPower = 18f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 0.5f;
 
