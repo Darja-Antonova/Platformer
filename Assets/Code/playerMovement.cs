@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckDistance = 0.12f;
     public Vector2 groundCheckOffset = new Vector2(0f, -0.5f);
     public LayerMask groundLayer;
+    private bool isFacingRight = true;
 
     private bool canDash = true;
     private bool isDashing;
@@ -22,13 +24,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float horizInput;
     private bool isGrounded;
-    private SpriteRenderer spriteRenderer;
     private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
@@ -42,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
         horizInput = Input.GetAxisRaw("Horizontal");
 
+        Flip();
+
         Vector2 rayOrigin = groundCheck != null ? (Vector2)groundCheck.position : (Vector2)transform.position + groundCheckOffset;
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
         isGrounded = hit.collider != null;
@@ -49,12 +51,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
-
-        if (spriteRenderer != null)
-        {
-            if (horizInput > 0.1f) spriteRenderer.flipX = true;
-            else if (horizInput < -0.1f) spriteRenderer.flipX = false;
         }
 
         //Update animator parameters
@@ -94,6 +90,16 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Flip()
+    {
+        if (isFacingRight && horizInput < 0f || !isFacingRight && horizInput > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
     private IEnumerator Dash()
     {
         canDash = false;
