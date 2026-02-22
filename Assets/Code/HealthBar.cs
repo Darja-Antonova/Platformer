@@ -8,6 +8,10 @@ public class HealthBar : MonoBehaviour
     public float maxHealth;
     public float healthDrain;
 
+    void Start()
+    {
+        HealthItem.OnHealthCollect += Heal;
+    }
     void Update()
     {
         health -= healthDrain * Time.deltaTime;
@@ -17,5 +21,11 @@ public class HealthBar : MonoBehaviour
             gameObject.SetActive(false);
         }
         healthBar.fillAmount = health / maxHealth;
+    }
+
+    void Heal(int amount)
+    {
+        health += amount;
+        if(health > maxHealth) health = maxHealth;
     }
 }
