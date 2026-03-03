@@ -18,7 +18,7 @@ public class HealthBar : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            gameObject.SetActive(false);
+            Die();
         }
         healthBar.fillAmount = health / maxHealth;
     }
@@ -27,5 +27,10 @@ public class HealthBar : MonoBehaviour
     {
         health += amount;
         if(health > maxHealth) health = maxHealth;
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 }
