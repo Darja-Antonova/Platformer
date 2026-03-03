@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     private bool isFacingRight = true;
 
-    private bool canDash = true;
-    private bool isDashing;
+    public bool canDash = true;
+    public bool isDashing;
     private float dashingPower = 18f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 0.5f;
