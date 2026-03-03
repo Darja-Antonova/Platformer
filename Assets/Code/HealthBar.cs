@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +9,10 @@ public class HealthBar : MonoBehaviour
     public float health;
     public float maxHealth;
     public float healthDrain;
+
+    private bool dashFromRespawn;
+
+    [SerializeField] private Vector3 playerRespawnPosition = new Vector3 (-2, -1, 0);
 
     void Start()
     {
@@ -19,6 +25,7 @@ public class HealthBar : MonoBehaviour
         {
             health = 0;
             Die();
+            Invoke("Respawn", 1);
         }
         healthBar.fillAmount = health / maxHealth;
     }
@@ -29,8 +36,20 @@ public class HealthBar : MonoBehaviour
         if(health > maxHealth) health = maxHealth;
     }
 
-    public void Die()
+    void Die()
     {
         gameObject.SetActive(false);
+
+    }
+
+    void Respawn()
+    {
+        /*transform.position = playerRespawnPosition;
+        gameObject.SetActive(true);
+        health = 100;
+        dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
+        */
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
 }

@@ -1939,7 +1939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749038255fe59b248948d7a743fb885b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRespawnPosition: {x: -2, y: -1, z: 0}
 --- !u!4 &802805250
 Transform:
   m_ObjectHideFlags: 0
@@ -2234,6 +2233,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  canDash: 1
   tr: {fileID: 2024316117}
 --- !u!50 &2024316113
 Rigidbody2D:
@@ -2502,7 +2502,8 @@ MonoBehaviour:
   healthBar: {fileID: 562855976}
   health: 100
   maxHealth: 100
-  healthDrain: 5
+  healthDrain: 10
+  playerRespawnPosition: {x: -2, y: -1, z: 0}
 --- !u!114 &2024316119
 MonoBehaviour:
   m_ObjectHideFlags: 0
