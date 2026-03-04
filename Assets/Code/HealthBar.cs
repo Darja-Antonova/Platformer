@@ -11,14 +11,16 @@ public class HealthBar : MonoBehaviour
     public float healthDrain;
 
     private bool dashFromRespawn;
-
-    //[SerializeField] private Vector3 playerRespawnPosition = new Vector3 (-2, -1, 0);
+    private float moveFromRespawn;
+    private float originalGravity = 1;
+    public GameObject[] healthOrb;
     public Vector2 checkpointPos;
 
     void Start()
     {
         HealthItem.OnHealthCollect += Heal;
         checkpointPos = transform.position;
+        healthOrb = GameObject.FindGameObjectsWithTag("Health");
     }
     void Update()
     {
@@ -51,14 +53,16 @@ public class HealthBar : MonoBehaviour
 
     void Respawn()
     {
-        //transform.position = playerRespawnPosition;
         gameObject.SetActive(true);
         health = 100;
+        dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
-        
-        //string currentSceneName = SceneManager.GetActiveScene().name;
-        //SceneManager.LoadScene(currentSceneName);
+        moveFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = originalGravity;
         transform.position = checkpointPos;
+        if(healthOrb != null)
+        {
+            healthOrb.SetActive(true);
+        }
     }
 }

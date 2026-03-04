@@ -17,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 0.5f;
 
-    [SerializeField] private TrailRenderer tr;
+    public TrailRenderer tr;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private float horizInput;
     private bool isGrounded;
     private Animator animator;
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        if (Input.GetKeyDown(KeyCode.M) && canDash)
+        if (Input.GetButtonDown("Dash") && canDash)
         {
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");

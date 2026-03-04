@@ -9,6 +9,7 @@ public class HealthItem : MonoBehaviour, IItem
     public void Collect()
     {
         OnHealthCollect.Invoke(healAmount);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
