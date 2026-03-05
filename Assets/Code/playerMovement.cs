@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        horizInput = Input.GetAxisRaw("Horizontal");
+        horizInput = Input.GetAxis("Horizontal");
 
         Flip();
 

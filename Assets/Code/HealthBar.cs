@@ -13,14 +13,14 @@ public class HealthBar : MonoBehaviour
     private bool dashFromRespawn;
     private float moveFromRespawn;
     private float originalGravity = 1;
-    public GameObject[] healthOrb;
     public Vector2 checkpointPos;
+
+    public HealthOrbRespawn orbRespawn;
 
     void Start()
     {
         HealthItem.OnHealthCollect += Heal;
         checkpointPos = transform.position;
-        healthOrb = GameObject.FindGameObjectsWithTag("Health");
     }
     void Update()
     {
@@ -59,10 +59,8 @@ public class HealthBar : MonoBehaviour
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
         moveFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = originalGravity;
+        orbRespawn.OrbRespawn();
         transform.position = checkpointPos;
-        if(healthOrb != null)
-        {
-            healthOrb.SetActive(true);
-        }
+
     }
 }
