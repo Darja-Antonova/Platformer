@@ -15,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isDashing;
     private float dashingPower = 18f;
     private float dashingTime = 0.2f;
-    private float dashingCooldown = 0.5f;
+    private float dashingCooldown = 0.15f;
+    private bool hasBeenInAir = false;
+    private float nextCooldown;
 
     public TrailRenderer tr;
 
@@ -24,10 +26,18 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private Animator animator;
 
+    public float fallMult = 2.5f;
+    public float smallJumpMult = 2f;
+    private float gravity;
+    public float jumpDelay = 0.25f;
+    private float jumpTimer;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        gravity = rb.gravityScale;
     }
 
     void Update()
@@ -46,9 +56,9 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
         isGrounded = hit.collider != null;
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpTimer = Time.time + jumpDelay;
         }
 
         if (Input.GetButtonDown("Dash") && canDash)
@@ -60,6 +70,9 @@ public class PlayerMovement : MonoBehaviour
             if (dashDir == Vector2.zero)
                 dashDir = new Vector2(transform.localScale.x, 0);
 
+            hasBeenInAir = false;
+            nextCooldown = Time.time + dashingCooldown;
+
             StartCoroutine(Dash(dashDir));
         }
 
@@ -68,6 +81,19 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetFloat("moveInput", Mathf.Abs(horizInput));
             animator.SetBool("isGrounded", isGrounded);
+        }
+
+        if (!isGrounded)
+        {
+            hasBeenInAir = true;
+        }
+
+        if (isGrounded && Time.time >= nextCooldown)
+        {
+            if (hasBeenInAir || rb.linearVelocity.y == 0)
+            {
+                canDash = true;
+            }
         }
     }
 
@@ -78,7 +104,26 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        if (rb.linearVelocity.y < 0)
+        {
+            rb.gravityScale = gravity * fallMult;
+        }
+        else if (rb.linearVelocity.y > 0 && !Input.GetButton("Jump"))
+        {
+            rb.gravityScale = gravity * smallJumpMult;
+        }
+        else
+        {
+            rb.gravityScale = gravity;
+        }
+
         rb.linearVelocity = new Vector2(horizInput * speed, rb.linearVelocity.y);
+
+        if(jumpTimer > Time.time && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpTimer = 0;
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -118,7 +163,5 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.gravityScale = originalGravity;
         isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
     }
 }

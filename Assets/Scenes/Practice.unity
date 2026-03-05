@@ -2562,6 +2562,9 @@ MonoBehaviour:
   isDashing: 0
   tr: {fileID: 2024316117}
   rb: {fileID: 2024316113}
+  fallMult: 2.5
+  smallJumpMult: 2
+  jumpDelay: 0.25
 --- !u!50 &2024316113
 Rigidbody2D:
   serializedVersion: 5
