@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7920961671748672094}
   - component: {fileID: 906567743550074329}
   - component: {fileID: 3855656436535551325}
+  - component: {fileID: -5668012335442557740}
   m_Layer: 0
   m_Name: HealthOrb 1
   m_TagString: Health
@@ -223,3 +224,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healAmount: 20
+--- !u!114 &-5668012335442557740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143188919329055237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b0995ebf3f4734487a6c12dfb6a273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
