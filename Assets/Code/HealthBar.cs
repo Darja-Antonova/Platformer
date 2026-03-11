@@ -34,7 +34,7 @@ public class HealthBar : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
     }
 
-    void Heal(int amount)
+    public void Heal(int amount)
     {
         health += amount;
         if(health > maxHealth) health = maxHealth;
