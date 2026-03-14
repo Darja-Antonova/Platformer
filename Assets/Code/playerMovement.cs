@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizInput;
     private bool isGrounded;
     private Animator animator;
+    private float health;
 
     public float fallMult = 2.5f;
     public float smallJumpMult = 2f;
@@ -38,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gravity = rb.gravityScale;
+
+        health = GameObject.Find("Player").GetComponent<HealthBar>().health;
     }
 
     void Update()
@@ -79,8 +82,11 @@ public class PlayerMovement : MonoBehaviour
         //Update animator parameters
         if (animator != null) 
         {
-            animator.SetFloat("moveInput", Mathf.Abs(horizInput));
-            animator.SetBool("isGrounded", isGrounded);
+            animator.SetFloat("MoveInput", Mathf.Abs(horizInput));
+            animator.SetBool("IsGrounded", isGrounded);
+            animator.SetBool("IsDashing", isDashing);
+            animator.SetFloat("Health", health);
+            animator.SetBool("HasJumped", hasBeenInAir);
         }
 
         if (!isGrounded)
@@ -126,7 +132,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("HealthCollider"))
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("AtCheckpoint");
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("HealthCollider"))
+        {
+            if (animator != null)
+            {
+                animator.SetTrigger("AtCheckpoint");
+            }
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("HealthCollider"))
+        {
+            if (animator != null)
+            {
+                animator.ResetTrigger("AtCheckpoint");
+            }
+        }
+    }
+
+        void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {

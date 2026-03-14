@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 4075e9b37c8ba9d41b828ac15c851646
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1826179134032094763
+    second: Light Ball Animations_0
+  - first:
+      213: -3671465650248566107
+    second: Light Ball Animations_1
+  - first:
+      213: -8823854336245616255
+    second: Light Ball Animations_2
+  - first:
+      213: 6351866644126092885
+    second: Light Ball Animations_3
+  - first:
+      213: 5488550757751662336
+    second: Light Ball Animations_4
+  - first:
+      213: 6476882736654560509
+    second: Light Ball Animations_5
+  - first:
+      213: -7702568319591482499
+    second: Light Ball Animations_6
+  - first:
+      213: 6679016991821049389
+    second: Light Ball Animations_7
+  - first:
+      213: 7952975279622829165
+    second: Light Ball Animations_8
+  - first:
+      213: 6201588593230595235
+    second: Light Ball Animations_9
+  - first:
+      213: 6100042247968982347
+    second: Light Ball Animations_10
+  - first:
+      213: -260886302483531801
+    second: Light Ball Animations_11
+  - first:
+      213: 6467297990022448134
+    second: Light Ball Animations_12
+  - first:
+      213: 7672064328852944410
+    second: Light Ball Animations_13
+  - first:
+      213: -798889623218929734
+    second: Light Ball Animations_14
+  - first:
+      213: 4720210656242076650
+    second: Light Ball Animations_15
+  - first:
+      213: -2594822104164896360
+    second: Light Ball Animations_16
+  - first:
+      213: -6270237794208897212
+    second: Light Ball Animations_17
+  - first:
+      213: 8538123997973647753
+    second: Light Ball Animations_18
+  - first:
+      213: 196721961348166382
+    second: Light Ball Animations_19
+  - first:
+      213: -145031584919071943
+    second: Light Ball Animations_20
+  - first:
+      213: -1969446963579792005
+    second: Light Ball Animations_21
+  - first:
+      213: -5478314422303550315
+    second: Light Ball Animations_22
+  - first:
+      213: -4554990653756192693
+    second: Light Ball Animations_23
+  - first:
+      213: -8095785598555974971
+    second: Light Ball Animations_24
+  - first:
+      213: -764628774770859504
+    second: Light Ball Animations_25
+  - first:
+      213: 6147278894295964183
+    second: Light Ball Animations_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Light Ball Animations_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c9db8a06923904c8471f2917ab11e1
+      internalID: 1826179134032094763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33fa7796cea08e41a194373b1f686b5
+      internalID: -3671465650248566107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a63bc346606234684783819e68ae4e
+      internalID: -8823854336245616255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ae31ad9a26adf4890c0b329c65a0b3
+      internalID: 6351866644126092885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7558df1feeb6934a8a8847552680490
+      internalID: 5488550757751662336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_5
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fabc5cee854aa9489a99d42280883e1
+      internalID: 6476882736654560509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_6
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7782ea406517ca04ca0068a701922c98
+      internalID: -7702568319591482499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a468c3da70814714e9a748245b849f25
+      internalID: 6679016991821049389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe33e32b46d14241b430000fbddf6a9
+      internalID: 7952975279622829165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a5192878b04e941b76d822ab1245ee
+      internalID: 6201588593230595235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_10
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63468c745397794ca16799aa1d8f4e6
+      internalID: 6100042247968982347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_11
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b4e02d4b79d1041bbeb39f15f47870
+      internalID: -260886302483531801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_12
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1cd6dc990b8aa41b037968d38043fe
+      internalID: 6467297990022448134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_13
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142f1733fa08a61448c05f0408f3163e
+      internalID: 7672064328852944410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_14
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13acf34d2ab968c41a8133d200201512
+      internalID: -798889623218929734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d2aa4f606020e4ebfa46d431df0bd7
+      internalID: 4720210656242076650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_16
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be94f273ab9dfd44b92e1f382868e74
+      internalID: -2594822104164896360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_17
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aab59655f3eb8b41ac54255171130e9
+      internalID: -6270237794208897212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_18
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d30d3e9fb217e1488ca89b50e683c58
+      internalID: 8538123997973647753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_19
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84530a82cd5d344eac3c0105ea50836
+      internalID: 196721961348166382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_20
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d086a94701fb24f98a821749f8efd9
+      internalID: -145031584919071943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light Ball Animations_21
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 1
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c1019f599ad8a42a1bd0343fadce7d
+      internalID: -1969446963579792005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f6ba6cd361079b4badcbf8434a2ed6a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Light Ball Animations_0: 1826179134032094763
+      Light Ball Animations_1: -3671465650248566107
+      Light Ball Animations_10: 6100042247968982347
+      Light Ball Animations_11: -260886302483531801
+      Light Ball Animations_12: 6467297990022448134
+      Light Ball Animations_13: 7672064328852944410
+      Light Ball Animations_14: -798889623218929734
+      Light Ball Animations_15: 4720210656242076650
+      Light Ball Animations_16: -2594822104164896360
+      Light Ball Animations_17: -6270237794208897212
+      Light Ball Animations_18: 8538123997973647753
+      Light Ball Animations_19: 196721961348166382
+      Light Ball Animations_2: -8823854336245616255
+      Light Ball Animations_20: -145031584919071943
+      Light Ball Animations_21: -1969446963579792005
+      Light Ball Animations_3: 6351866644126092885
+      Light Ball Animations_4: 5488550757751662336
+      Light Ball Animations_5: 6476882736654560509
+      Light Ball Animations_6: -7702568319591482499
+      Light Ball Animations_7: 6679016991821049389
+      Light Ball Animations_8: 7952975279622829165
+      Light Ball Animations_9: 6201588593230595235
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
