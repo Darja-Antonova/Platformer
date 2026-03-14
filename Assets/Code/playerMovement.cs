@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     private float horizInput;
     private bool isGrounded;
     private Animator animator;
-    private float health;
 
     public float fallMult = 2.5f;
     public float smallJumpMult = 2f;
@@ -39,8 +38,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         gravity = rb.gravityScale;
-
-        health = GameObject.Find("Player").GetComponent<HealthBar>().health;
     }
 
     void Update()
@@ -85,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("MoveInput", Mathf.Abs(horizInput));
             animator.SetBool("IsGrounded", isGrounded);
             animator.SetBool("IsDashing", isDashing);
-            animator.SetFloat("Health", health);
             animator.SetBool("HasJumped", hasBeenInAir);
         }
 

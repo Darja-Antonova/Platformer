@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,13 +12,19 @@ public class HealthBar : MonoBehaviour
     private float moveFromRespawn;
     private float originalGravity = 1;
     public Vector2 checkpointPos;
+    private bool freezeDash;
+    private Vector2 freezeMovement;
+    private float freezeGravity;
+    private bool isDead;
 
     public HealthOrbRespawn orbRespawn;
+    private Animator animator;
 
     void Start()
     {
         HealthItem.OnHealthCollect += Heal;
         checkpointPos = transform.position;
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -28,8 +32,16 @@ public class HealthBar : MonoBehaviour
         if (health < 0)
         {
             health = 0;
-            Die();
-            Invoke("Respawn", 1);
+
+            freezeMovement = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.linearVelocity = Vector2.zero;
+            freezeGravity = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = 0f;
+            isDead = true;
+            animator.SetBool("IsDead", isDead);
+            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
+            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
+            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
+            Invoke("Die", 1);
+            Invoke("Respawn", 2);
         }
         healthBar.fillAmount = health / maxHealth;
     }
@@ -53,6 +65,7 @@ public class HealthBar : MonoBehaviour
 
     void Respawn()
     {
+        isDead = false;
         gameObject.SetActive(true);
         health = 100;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
