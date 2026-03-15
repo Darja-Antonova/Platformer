@@ -50,5 +50,11 @@ TagManager:
   - name: Player
     uniqueID: 3806626107
     locked: 0
+  - name: Health
+    uniqueID: 1764310295
+    locked: 0
+  - name: Title
+    uniqueID: 37934225
+    locked: 0
   m_RenderingLayers:
   - Default
