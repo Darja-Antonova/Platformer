@@ -9,6 +9,7 @@ public class Collector : MonoBehaviour
         if (item != null)
         {
             item.Collect();
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.collectibleSFX);
         }
     }
 }

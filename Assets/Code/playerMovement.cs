@@ -58,11 +58,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.jumpSFX);
             jumpTimer = Time.time + jumpDelay;
         }
 
         if (Input.GetButtonDown("Dash") && canDash)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.dashSFX);
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
             Vector2 dashDir = new Vector2(x, y);
@@ -146,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("AtCheckpoint");
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.healingSFX);
             }
         }
 
