@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,6 +34,25 @@ public class PlayerMovement : MonoBehaviour
     public float jumpDelay = 0.25f;
     private float jumpTimer;
 
+    public InputAction MoveAction;
+    public InputAction JumpAction;
+    public InputAction DashAction;
+
+    private float smoothedInput;
+
+    void OnEnable()
+    {
+        MoveAction.Enable();
+        JumpAction.Enable();
+        DashAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        MoveAction.Disable();
+        JumpAction.Disable();
+        DashAction.Disable();
+    }
 
     void Start()
     {
@@ -48,7 +69,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        horizInput = Input.GetAxis("Horizontal");
+        Vector2 moveInput = MoveAction.ReadValue<Vector2>();
+        horizInput = smoothedInput;
+
+        float target = moveInput.x;
+        float lerpSpeed = (target == 0) ? 20f : 5f;
+        smoothedInput = Mathf.Lerp(smoothedInput, target, lerpSpeed * Time.deltaTime);
 
         Flip();
 
@@ -56,17 +82,18 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, groundCheckDistance, groundLayer);
         isGrounded = hit.collider != null;
 
-        if (Input.GetButtonDown("Jump"))
+        if (JumpAction.WasPressedThisFrame())
         {
             AudioManager.Instance.PlaySFX(AudioManager.Instance.jumpSFX);
             jumpTimer = Time.time + jumpDelay;
         }
 
-        if (Input.GetButtonDown("Dash") && canDash)
+        if (DashAction.WasPressedThisFrame() && canDash)
         {
             AudioManager.Instance.PlaySFX(AudioManager.Instance.dashSFX);
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
+            Vector2 rawInput = MoveAction.ReadValue<Vector2>();
+            float x = moveInput.x;
+            float y = moveInput.y;
             Vector2 dashDir = new Vector2(x, y);
 
             if (dashDir == Vector2.zero)
@@ -112,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = gravity * fallMult;
         }
-        else if (rb.linearVelocity.y > 0 && !Input.GetButton("Jump"))
+        else if (rb.linearVelocity.y > 0 && !JumpAction.IsPressed())
         {
             rb.gravityScale = gravity * smallJumpMult;
         }
