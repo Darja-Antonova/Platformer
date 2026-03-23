@@ -33,6 +33,7 @@ public class HealthBar : MonoBehaviour
         {
             health = 0;
 
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
             freezeMovement = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.linearVelocity = Vector2.zero;
             freezeGravity = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = 0f;
             isDead = true;
@@ -65,6 +66,7 @@ public class HealthBar : MonoBehaviour
 
     void Respawn()
     {
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
         isDead = false;
         gameObject.SetActive(true);
         health = 100;
