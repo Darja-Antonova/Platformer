@@ -7,6 +7,7 @@ TagManager:
   - Health
   - Checkpoint
   - HealthCollider
+  - Transition
   layers:
   - Default
   - TransparentFX
@@ -55,6 +56,9 @@ TagManager:
     locked: 0
   - name: Title
     uniqueID: 37934225
+    locked: 0
+  - name: DeathFade
+    uniqueID: 2581630663
     locked: 0
   m_RenderingLayers:
   - Default

@@ -18,6 +18,7 @@ public class HealthBar : MonoBehaviour
     private bool isDead;
 
     public HealthOrbRespawn orbRespawn;
+    private DeathFade deathFade;
     private Animator animator;
 
     void Start()
@@ -25,6 +26,7 @@ public class HealthBar : MonoBehaviour
         HealthItem.OnHealthCollect += Heal;
         checkpointPos = transform.position;
         animator = GetComponent<Animator>();
+        deathFade = GameObject.FindGameObjectWithTag("Transition").GetComponent<DeathFade>();
     }
     void Update()
     {
@@ -55,6 +57,8 @@ public class HealthBar : MonoBehaviour
 
     void Die()
     {
+        deathFade.CurrentFadeType = DeathFade.FadeType.Shutters;
+        deathFade.FadeOut(deathFade.CurrentFadeType);
         gameObject.SetActive(false);
 
     }
@@ -70,6 +74,10 @@ public class HealthBar : MonoBehaviour
         isDead = false;
         gameObject.SetActive(true);
         health = 100;
+
+        deathFade.CurrentFadeType = DeathFade.FadeType.Shutters;
+        deathFade.FadeIn(deathFade.CurrentFadeType);
+
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
