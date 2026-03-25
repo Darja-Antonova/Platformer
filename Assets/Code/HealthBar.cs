@@ -43,8 +43,8 @@ public class HealthBar : MonoBehaviour
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
-            Invoke("Die", 1);
-            Invoke("Respawn", 2);
+            DeathFade fader = FindFirstObjectByType<DeathFade>();
+            fader.StartCoroutine(fader.PlayFullDeathSequence(Die, Respawn));
         }
         healthBar.fillAmount = health / maxHealth;
     }
@@ -57,8 +57,6 @@ public class HealthBar : MonoBehaviour
 
     void Die()
     {
-        deathFade.CurrentFadeType = DeathFade.FadeType.Shutters;
-        deathFade.FadeOut(deathFade.CurrentFadeType);
         gameObject.SetActive(false);
 
     }
@@ -74,9 +72,6 @@ public class HealthBar : MonoBehaviour
         isDead = false;
         gameObject.SetActive(true);
         health = 100;
-
-        deathFade.CurrentFadeType = DeathFade.FadeType.Shutters;
-        deathFade.FadeIn(deathFade.CurrentFadeType);
 
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;

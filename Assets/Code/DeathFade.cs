@@ -1,7 +1,7 @@
-//using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class DeathFade : MonoBehaviour
 {
@@ -15,6 +15,7 @@ public class DeathFade : MonoBehaviour
 
     private Image _image;
     private Material _material;
+    private Coroutine _fadeCoroutine;
 
     public enum FadeType
     {
@@ -71,31 +72,45 @@ public class DeathFade : MonoBehaviour
     {
         _material.SetFloat(_fadeAmount, 0f);
         StartCoroutine(HandleFade(1f, 0f));
-        //_material.DOFade(1f, _fadeAmount, FadeDuration)
-        //.SetEase(Ease.InOutSine);
     }
 
     private void StartFadeIn()
     {
         _material.SetFloat(_fadeAmount, 1f);
         StartCoroutine(HandleFade(0f, 1f));
-        //_material.DOFade(0f, _fadeAmount, FadeDuration)
-        //.SetEase(Ease.InOutSine);
     }
 
-    private IEnumerator HandleFade(float targetAmount, float startAmount)
+    private IEnumerator HandleFade(float startAmount, float targetAmount)
     {
+        if (_fadeCoroutine != null) StopCoroutine(_fadeCoroutine);
+
         float elapsedTime = 0f;
         while(elapsedTime < FadeDuration)
         {
             elapsedTime += Time.deltaTime;
 
-            float lerpedAmount = Mathf.Lerp(startAmount, targetAmount, (elapsedTime / FadeDuration));
+            float t = Mathf.Clamp01(elapsedTime / FadeDuration);
+            float lerpedAmount = Mathf.Lerp(startAmount, targetAmount, t);
             _material.SetFloat(_fadeAmount, lerpedAmount);
 
             yield return null;
         }
 
         _material.SetFloat(_fadeAmount, targetAmount);
+        _fadeCoroutine = null;
+    }
+
+    public IEnumerator PlayFullDeathSequence(Action die, Action respawn)
+    {
+        _material.SetFloat(_fadeAmount, 0f);
+        yield return new WaitForSeconds(0.2f);
+        yield return StartCoroutine(HandleFade(0f, 1f));
+
+        die.Invoke();
+        yield return new WaitForSeconds(0.75f);
+        respawn.Invoke();
+
+        yield return new WaitForSeconds(0.25f);
+        yield return StartCoroutine(HandleFade(1f, 0f));
     }
 }
