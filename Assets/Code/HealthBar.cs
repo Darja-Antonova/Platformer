@@ -16,18 +16,16 @@ public class HealthBar : MonoBehaviour
     private Vector2 freezeMovement;
     private float freezeGravity;
     public bool isDead;
-    public bool isAlive;
 
     public HealthOrbRespawn orbRespawn;
     private Animator animator;
+    public ScreenTransition transition;
 
     void Start()
     {
         HealthItem.OnHealthCollect += Heal;
         checkpointPos = transform.position;
         animator = GetComponent<Animator>();
-        isAlive = true;
-        isDead = false;
     }
     void Update()
     {
@@ -41,6 +39,7 @@ public class HealthBar : MonoBehaviour
             freezeGravity = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = 0f;
             isDead = true;
             animator.SetBool("IsDead", isDead);
+            transition.DeathTransition();
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
             freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
@@ -71,9 +70,9 @@ public class HealthBar : MonoBehaviour
     {
         gameObject.GetComponent<PlayerMovement>().enabled = true;
         isDead = false;
-        isAlive = true;
         gameObject.SetActive(true);
         health = 100;
+        transition.RespawnTransition();
 
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
         dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
@@ -81,7 +80,5 @@ public class HealthBar : MonoBehaviour
         moveFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = originalGravity;
         orbRespawn.OrbRespawn();
         transform.position = checkpointPos;
-        isAlive = false;
-
     }
 }

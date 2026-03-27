@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
-using UnityEngine.Splines;
 
 public class ScreenTransition : MonoBehaviour
 {
@@ -14,22 +12,38 @@ public class ScreenTransition : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        GameObject playerObj = GameObject.Find("Player");
-        if (playerObj != null)
+        GameObject player = GameObject.Find("Player");
+        if (player != null)
         {
-            playerHealth = playerObj.GetComponent<HealthBar>();
+            playerHealth = player.GetComponent<HealthBar>();
         }
     }
-    void Update()
+
+    private void Start()
     {
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(player.position + offset);
+        Vector3 lastPos = player.position + offset;
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(lastPos);
 
         uiElement.position = screenPos;
 
+    }
+
+    private void Update()
+    {
         if (playerHealth != null)
         {
-            animator.SetBool("IsAlive", playerHealth.isAlive);
+            animator.SetBool("IsAlive", playerHealth.isDead == false);
             animator.SetBool("IsDead", playerHealth.isDead);
         }
+    }
+
+    public void RespawnTransition()
+    {
+        animator.SetBool("IsAlive", playerHealth.isDead == false);
+    }
+
+    public void DeathTransition()
+    {
+        animator.SetBool("IsDead", playerHealth.isDead);
     }
 }
