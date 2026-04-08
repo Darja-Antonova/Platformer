@@ -8,13 +8,8 @@ public class HealthBar : MonoBehaviour
     public float maxHealth;
     public float healthDrain;
 
-    private bool dashFromRespawn;
-    private float moveFromRespawn;
     private float originalGravity = 1;
     public Vector2 checkpointPos;
-    private bool freezeDash;
-    private Vector2 freezeMovement;
-    private float freezeGravity;
     public bool isDead;
 
     public HealthOrbRespawn orbRespawn;
@@ -34,15 +29,19 @@ public class HealthBar : MonoBehaviour
         {
             health = 0;
 
-            gameObject.GetComponent<PlayerMovement>().enabled = false;
-            freezeMovement = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.linearVelocity = Vector2.zero;
-            freezeGravity = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = 0f;
+            var playerMovement = GetComponent<PlayerMovement>();
+            playerMovement.enabled = false;
+            playerMovement.rb.linearVelocity = Vector2.zero;
+            playerMovement.rb.gravityScale = 0f;
             isDead = true;
+
+            Vector3 finalPos = transform.position;
+            transition.DeathTransition(finalPos);
             animator.SetBool("IsDead", isDead);
-            transition.DeathTransition();
-            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
-            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = false;
-            freezeDash = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
+
+            playerMovement.tr.emitting = false;
+            playerMovement.canDash = false;
+            playerMovement.isDashing = false;
             Invoke("Die", 1);
             Invoke("Respawn", 2);
         }
@@ -68,16 +67,18 @@ public class HealthBar : MonoBehaviour
 
     void Respawn()
     {
-        gameObject.GetComponent<PlayerMovement>().enabled = true;
+        var playerMovement = GetComponent<PlayerMovement>();
+        playerMovement.enabled = true;
         isDead = false;
         gameObject.SetActive(true);
         health = 100;
-        transition.RespawnTransition();
+        Vector3 finalPos = transform.position;
+        transition.RespawnTransition(finalPos);
 
-        dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().tr.emitting = false;
-        dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().canDash = true;
-        dashFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().isDashing = false;
-        moveFromRespawn = GameObject.Find("Player").GetComponent<PlayerMovement>().rb.gravityScale = originalGravity;
+        playerMovement.tr.emitting = false;
+        playerMovement.canDash = true;
+        playerMovement.isDashing = false;
+        playerMovement.rb.gravityScale = originalGravity;
         orbRespawn.OrbRespawn();
         transform.position = checkpointPos;
     }

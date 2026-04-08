@@ -6,44 +6,48 @@ public class ScreenTransition : MonoBehaviour
     public RectTransform uiElement;
     public Vector3 offset;
     private Animator animator;
-    private HealthBar playerHealth;
+    private Vector2 deathWorldPos;
+    private Vector2 reviveWorldPos;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-
-        GameObject player = GameObject.Find("Player");
-        if (player != null)
-        {
-            playerHealth = player.GetComponent<HealthBar>();
-        }
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Start()
     {
-        Vector3 lastPos = player.position + offset;
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(lastPos);
+        Vector2 lastPos = player.position + offset;
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(lastPos);
 
         uiElement.position = screenPos;
 
     }
 
-    private void Update()
+    public void RespawnTransition(Vector3 worldPos)
     {
-        if (playerHealth != null)
-        {
-            animator.SetBool("IsAlive", playerHealth.isDead == false);
-            animator.SetBool("IsDead", playerHealth.isDead);
-        }
+        reviveWorldPos = worldPos;
+        UpdateToSpecificPosition(reviveWorldPos);
+        animator.SetBool("IsDead", false);
     }
 
-    public void RespawnTransition()
+    public void DeathTransition(Vector3 worldPos)
     {
-        animator.SetBool("IsAlive", playerHealth.isDead == false);
+        deathWorldPos = worldPos;
+        UpdateToSpecificPosition(deathWorldPos);
+        animator.SetBool("IsDead", true);
     }
 
-    public void DeathTransition()
+    public void UpdateToSpecificPosition(Vector3 worldPos)
     {
-        animator.SetBool("IsDead", playerHealth.isDead);
+        Vector2 screenPos = Camera.main.WorldToScreenPoint(worldPos + offset);
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            uiElement.parent as RectTransform,
+            screenPos,
+            null,
+            out Vector2 localPoint
+        );
+
+        uiElement.anchoredPosition = localPoint;
     }
 }
