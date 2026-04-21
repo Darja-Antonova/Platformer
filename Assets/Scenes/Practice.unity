@@ -10118,7 +10118,7 @@ Transform:
   m_GameObject: {fileID: 1018984307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.074502945, y: -0.034830093, z: -10}
+  m_LocalPosition: {x: -1.1685791, y: -0.084830046, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10269,7 +10269,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10.8
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -10766,6 +10766,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1101144899932440095, guid: 9836ee681fff92947835e8fe7de9e1ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4159416043389170063, guid: 9836ee681fff92947835e8fe7de9e1ff, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4169652797930639286, guid: 9836ee681fff92947835e8fe7de9e1ff, type: 3}

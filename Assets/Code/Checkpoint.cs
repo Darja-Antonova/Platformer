@@ -5,6 +5,7 @@ public class Checkpoint : MonoBehaviour
     HealthBar checkpointPos;
     public Transform respawnPoint;
     Collider2D coll;
+    public GameObject spotlight;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            spotlight.SetActive(true);
             checkpointPos.UpdateCheckpoint(respawnPoint.position);
             coll.enabled = false;
         }
