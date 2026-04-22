@@ -19,8 +19,9 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+
             spotlightObject.SetActive(true);
-            spotlight.Play("Spotlight Animation");
+            spotlight.SetBool("Touched", true);
             checkpointPos.UpdateCheckpoint(respawnPoint.position);
             coll.enabled = false;
         }
