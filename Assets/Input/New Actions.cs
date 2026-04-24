@@ -355,10 +355,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""6cb00a31-2b9e-4fa2-b4e3-3ef27fd5ac55"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/hat/up"",
+                    ""path"": ""<Joystick>/stick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -366,10 +366,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""9bbf8a1a-e1c3-409c-9688-71217f20a464"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/hat/down"",
+                    ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -377,10 +377,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""adcb1af0-63ef-4c05-9248-39c92c6527ff"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/hat/left"",
+                    ""path"": ""<Joystick>/stick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -388,10 +388,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""c001c5c8-4735-40ec-bf75-253eebc75885"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/hat/right"",
+                    ""path"": ""<Joystick>/stick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -421,10 +421,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""21801fd4-6e7b-46c1-a9a5-8079342d65cb"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/button3"",
+                    ""path"": ""<Joystick>/button3"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -454,10 +454,10 @@ public partial class @NewActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b90ec878-193a-4c3d-a641-cbbcdd612a0a"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/button8"",
+                    ""path"": ""<Joystick>/button8"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Switch Pro Controller"",
+                    ""groups"": """",
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
