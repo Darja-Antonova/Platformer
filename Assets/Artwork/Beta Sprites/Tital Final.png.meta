@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: d9b1185c6c01e654cba0135d0db5518d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 413754630458162002
+    second: Tital Final_0
+  - first:
+      213: 3724254718908350232
+    second: Tital Final_1
+  - first:
+      213: 4810648144150075575
+    second: Tital Final_2
+  - first:
+      213: -1730627746444430771
+    second: Tital Final_3
+  - first:
+      213: -9069530355121806826
+    second: Tital Final_4
+  - first:
+      213: -3794100340896768353
+    second: Tital Final_5
+  - first:
+      213: -2933638342082870710
+    second: Tital Final_6
+  - first:
+      213: 3449660254876546054
+    second: Tital Final_7
+  - first:
+      213: 3186815478937717837
+    second: Tital Final_8
+  - first:
+      213: -2869322134991053896
+    second: Tital Final_9
+  - first:
+      213: -4294278884668879944
+    second: Tital Final_10
+  - first:
+      213: 1045616256023146796
+    second: Tital Final_11
+  - first:
+      213: 2570157549764974513
+    second: Tital Final_12
+  - first:
+      213: -1520484054238951746
+    second: Tital Final_13
+  - first:
+      213: -6175087211518124147
+    second: Tital Final_14
+  - first:
+      213: -7480830399839299855
+    second: Tital Final_15
+  - first:
+      213: 6602154469938877064
+    second: Tital Final_16
+  - first:
+      213: -3827123019841959982
+    second: Tital Final_17
+  - first:
+      213: 4158869109043776165
+    second: Tital Final_18
+  - first:
+      213: 6457046438669100585
+    second: Tital Final_19
+  - first:
+      213: 2072122902536715724
+    second: Tital Final_20
+  - first:
+      213: -3178245692234830241
+    second: Tital Final_21
+  - first:
+      213: -1707909408120266651
+    second: Tital Final_22
+  - first:
+      213: -4416274366860424085
+    second: Tital Final_23
+  - first:
+      213: -8716820734463945521
+    second: Tital Final_24
+  - first:
+      213: 143706961022193357
+    second: Tital Final_25
+  - first:
+      213: -7944068696752204621
+    second: Tital Final_26
+  - first:
+      213: -4620317951779171867
+    second: Tital Final_27
+  - first:
+      213: 1757507063146561338
+    second: Tital Final_28
+  - first:
+      213: 5799704402544096506
+    second: Tital Final_29
+  - first:
+      213: -1206649393538799638
+    second: Tital Final_30
+  - first:
+      213: 4141220298651616897
+    second: Tital Final_31
+  - first:
+      213: -399071293030030183
+    second: Tital Final_32
+  - first:
+      213: -513966660211483301
+    second: Tital Final_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tital Final_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bb1ace4a3fdb500800000000000000
+      internalID: 413754630458162002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 465
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fba955fe53fa330800000000000000
+      internalID: 3724254718908350232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8157bcffad2c240800000000000000
+      internalID: 4810648144150075575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 490
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42bebedb339bf7e0800000000000000
+      internalID: -1730627746444430771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612a757c13e822280800000000000000
+      internalID: -9069530355121806826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_5
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 465
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9ed8aa87d5a85bc0800000000000000
+      internalID: -3794100340896768353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_6
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 488
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a424fa0987f9947d0800000000000000
+      internalID: -2933638342082870710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 483
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60433b789b7afdf20800000000000000
+      internalID: 3449660254876546054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_8
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c8cca2bc7d93c20800000000000000
+      internalID: 3186815478937717837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 465
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb51b578be1e28d0800000000000000
+      internalID: -2869322134991053896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_10
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bbc9d04b18a764c0800000000000000
+      internalID: -4294278884668879944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 490
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2132a7e176c28e00800000000000000
+      internalID: 1045616256023146796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_12
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 465
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7978a9ca80ba320800000000000000
+      internalID: 2570157549764974513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_13
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 465
+        width: 12
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6017cfec726eae0800000000000000
+      internalID: -1520484054238951746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_14
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 494
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f976ce5eead4aa0800000000000000
+      internalID: -6175087211518124147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 478
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f692a0f260ce2890800000000000000
+      internalID: -7480830399839299855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 455
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882d6fcb2809f9b50800000000000000
+      internalID: 6602154469938877064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 458
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d78992f3e353eac0800000000000000
+      internalID: -3827123019841959982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_18
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa46e78b6547b930800000000000000
+      internalID: 4158869109043776165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_19
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926a21b66890c9950800000000000000
+      internalID: 6457046438669100585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccdf6a02dc8a1cc10800000000000000
+      internalID: 2072122902536715724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_21
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e6d69c16a94e3d0800000000000000
+      internalID: -3178245692234830241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 465
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560a17431794c48e0800000000000000
+      internalID: -1707909408120266651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 465
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c0f9c9cdd36b2c0800000000000000
+      internalID: -4416274366860424085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_24
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 460
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc45487c9b1a70780800000000000000
+      internalID: -8716820734463945521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_25
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 461
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dce8a7b38bc8ef100800000000000000
+      internalID: 143706961022193357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_26
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 455
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4d8ca1c9ff0c190800000000000000
+      internalID: -7944068696752204621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_27
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e197d66d4551efb0800000000000000
+      internalID: -4620317951779171867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_28
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f371dbc5be36810800000000000000
+      internalID: 1757507063146561338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_29
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4f8eb0d60bc7050800000000000000
+      internalID: 5799704402544096506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_30
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 465
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7eda905ce114fe0800000000000000
+      internalID: -1206649393538799638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_31
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 465
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18644c5abe1987930800000000000000
+      internalID: 4141220298651616897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_32
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 465
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994a3eaf5c6367af0800000000000000
+      internalID: -399071293030030183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tital Final_33
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 460
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d53bfab060ed8f0800000000000000
+      internalID: -513966660211483301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Tital Final_0: 413754630458162002
+      Tital Final_1: 3724254718908350232
+      Tital Final_10: -4294278884668879944
+      Tital Final_11: 1045616256023146796
+      Tital Final_12: 2570157549764974513
+      Tital Final_13: -1520484054238951746
+      Tital Final_14: -6175087211518124147
+      Tital Final_15: -7480830399839299855
+      Tital Final_16: 6602154469938877064
+      Tital Final_17: -3827123019841959982
+      Tital Final_18: 4158869109043776165
+      Tital Final_19: 6457046438669100585
+      Tital Final_2: 4810648144150075575
+      Tital Final_20: 2072122902536715724
+      Tital Final_21: -3178245692234830241
+      Tital Final_22: -1707909408120266651
+      Tital Final_23: -4416274366860424085
+      Tital Final_24: -8716820734463945521
+      Tital Final_25: 143706961022193357
+      Tital Final_26: -7944068696752204621
+      Tital Final_27: -4620317951779171867
+      Tital Final_28: 1757507063146561338
+      Tital Final_29: 5799704402544096506
+      Tital Final_3: -1730627746444430771
+      Tital Final_30: -1206649393538799638
+      Tital Final_31: 4141220298651616897
+      Tital Final_32: -399071293030030183
+      Tital Final_33: -513966660211483301
+      Tital Final_4: -9069530355121806826
+      Tital Final_5: -3794100340896768353
+      Tital Final_6: -2933638342082870710
+      Tital Final_7: 3449660254876546054
+      Tital Final_8: 3186815478937717837
+      Tital Final_9: -2869322134991053896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
