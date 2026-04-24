@@ -7,6 +7,7 @@ public class Checkpoint : MonoBehaviour
     Collider2D coll;
     Animator spotlight;
     public GameObject spotlightObject;
+    public GameObject windowLights;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class Checkpoint : MonoBehaviour
 
             spotlightObject.SetActive(true);
             spotlight.SetBool("Touched", true);
+            windowLights.SetActive(true);
             checkpointPos.UpdateCheckpoint(respawnPoint.position);
             coll.enabled = false;
         }
