@@ -48,6 +48,9 @@ TagManager:
   - name: Background
     uniqueID: 1943077573
     locked: 0
+  - name: Tutorial
+    uniqueID: 3587268127
+    locked: 0
   - name: Player
     uniqueID: 3806626107
     locked: 0
