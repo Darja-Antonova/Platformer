@@ -16,7 +16,7 @@ public class EndingTransition : MonoBehaviour
 
     IEnumerator LoadScene()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(2);
     }
 }

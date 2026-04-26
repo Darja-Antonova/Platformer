@@ -548,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &140793805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14195,7 +14195,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 11.25
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -22740,7 +22740,7 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
+  m_PointLightInnerRadius: 0.5
   m_PointLightOuterRadius: 3
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
@@ -23499,6 +23499,11 @@ MonoBehaviour:
   isDead: 0
   orbRespawn: {fileID: 594146188}
   transition: {fileID: 140793812}
+  playerLight: {fileID: 2014352328}
+  minRadius: 0.5
+  maxRadius: 4
+  musicSource: {fileID: 1308743721}
+  minPitch: 0.5
 --- !u!114 &2024316119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24732,7 +24737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7920961671748672094, guid: 4927fa8406d4dee43a7f886220753fa2, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7920961671748672094, guid: 4927fa8406d4dee43a7f886220753fa2, type: 3}
       propertyPath: m_SortingLayerID

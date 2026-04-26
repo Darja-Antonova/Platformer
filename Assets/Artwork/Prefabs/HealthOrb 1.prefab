@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 906567743550074329}
   - component: {fileID: 3855656436535551325}
   - component: {fileID: -5668012335442557740}
+  - component: {fileID: 7914964095130858534}
   m_Layer: 0
   m_Name: HealthOrb 1
   m_TagString: Health
@@ -162,7 +163,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1764310295
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7739960275500931684, guid: e0993376df7dc0b47b620d02546b7026, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -236,3 +237,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b0995ebf3f4734487a6c12dfb6a273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &7914964095130858534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143188919329055237}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27d0255ffe251d7409e1d382cfe7e564, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

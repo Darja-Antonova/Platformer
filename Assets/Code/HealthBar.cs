@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
 
 public class HealthBar : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class HealthBar : MonoBehaviour
     public HealthOrbRespawn orbRespawn;
     private Animator animator;
     public ScreenTransition transition;
+    public Light2D playerLight;
+
+    public float minRadius = 0.5f;
+    public float maxRadius = 5f;
+
+    public AudioSource musicSource;
+    public float minPitch = 0.5f;
 
     void Start()
     {
@@ -46,6 +54,27 @@ public class HealthBar : MonoBehaviour
             Invoke("Respawn", 2);
         }
         healthBar.fillAmount = health / maxHealth;
+
+
+        float healthPercent = health / maxHealth;
+        float targetRadius = Mathf.Lerp(minRadius, maxRadius, healthPercent);
+
+        if (playerLight != null)
+        {
+            playerLight.pointLightOuterRadius = targetRadius;
+        }
+
+        float threshold = 1f / 3f;
+
+        if (healthPercent >= threshold)
+        {
+            AudioManager.Instance.musicSource.pitch = 1.0f;
+        }
+        else
+        {
+            float normalisedLowHealth = healthPercent / threshold;
+            AudioManager.Instance.musicSource.pitch = Mathf.Lerp(0.5f, 1.0f, normalisedLowHealth);
+        }
     }
 
     public void Heal(int amount)
