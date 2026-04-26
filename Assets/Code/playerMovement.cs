@@ -162,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("HealthCollider"))
         {
+            AudioManager.Instance.StartLoopingSFX(AudioManager.Instance.healingSFX);
             if (animator != null)
             {
                 animator.SetTrigger("AtCheckpoint");
@@ -176,7 +177,6 @@ public class PlayerMovement : MonoBehaviour
             if (animator != null)
             {
                 animator.SetTrigger("AtCheckpoint");
-                AudioManager.Instance.PlaySFX(AudioManager.Instance.healingSFX);
             }
         }
 
@@ -186,6 +186,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.CompareTag("HealthCollider"))
         {
+            AudioManager.Instance.StopLoopingSFX();
             if (animator != null)
             {
                 animator.ResetTrigger("AtCheckpoint");

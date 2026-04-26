@@ -72,4 +72,16 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(clip);
         }
     }
+    public void StartLoopingSFX(AudioClip clip)
+    {
+        sfxSource.clip = clip;
+        sfxSource.loop = true;
+        sfxSource.Play();
+    }
+
+    public void StopLoopingSFX()
+    {
+        sfxSource.loop = false;
+        sfxSource.Stop();
+    }
 }
