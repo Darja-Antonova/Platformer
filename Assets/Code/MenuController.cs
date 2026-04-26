@@ -6,19 +6,10 @@ public class MenuController : MonoBehaviour
     public CanvasGroup mainMenu;
     public CanvasGroup optionsMenu;
     public float transitionDuration = 0.25f;
-    public AudioClip WindSFX;
-    public AudioSource musicSource; //In future, add to AudioManager if possible
 
     void Start()
     {
         ShowMainMenuInstant();
-
-        if (WindSFX != null && musicSource != null)
-        {
-            musicSource.clip = WindSFX;
-            musicSource.loop = true;
-            musicSource.Play();
-        }
     }
 
     public void OpenOptionsMenu()

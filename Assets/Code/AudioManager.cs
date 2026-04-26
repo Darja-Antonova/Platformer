@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -31,14 +32,37 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        if (backgroundMusic != null && musicSource != null)
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Main Menu" || scene.name == "Ending")
         {
-            musicSource.clip = backgroundMusic;
-            musicSource.loop = true;
-            musicSource.Play();
+            PlayMusic(menuMusic);
         }
+        else
+        {
+            PlayMusic(backgroundMusic);
+        }
+    }
+
+    private void PlayMusic(AudioClip clip)
+    {
+        if (clip == null || musicSource == null) return;
+
+        if (musicSource.clip == clip) return;
+
+        musicSource.clip = clip;
+        musicSource.loop = true;
+        musicSource.Play();
     }
 
     public void PlaySFX(AudioClip clip)
@@ -46,16 +70,6 @@ public class AudioManager : MonoBehaviour
         if (clip != null && sfxSource != null)
         {
             sfxSource.PlayOneShot(clip);
-        }
-    }
-
-    public void PlayMusic(AudioClip clip)
-    {
-        if (clip != null && musicSource != null)
-        {
-            musicSource.clip = clip;
-            musicSource.loop = true;
-            musicSource.Play();
         }
     }
 }
